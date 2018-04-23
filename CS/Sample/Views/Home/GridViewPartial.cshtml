@@ -1,0 +1,33 @@
+﻿@Html.DevExpress().GridView(settings => {
+    settings.Name = "gridView";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+
+    settings.KeyFieldName = "ID";
+    settings.SettingsEditing.Mode = GridViewEditingMode.Batch;
+
+    settings.CommandColumn.Visible = true;
+    settings.CommandColumn.SetHeaderTemplateContent(c => {
+        Html.DevExpress().Button(btnSettings => {
+            btnSettings.Name = "addNewBtn";
+            btnSettings.Text = "New";
+            btnSettings.RenderMode = ButtonRenderMode.Link;
+            btnSettings.ClientSideEvents.Click = "OnHeaderNewClick";                
+        }).Render();
+    });
+    settings.CommandColumn.CustomButtons.Add(new GridViewCommandColumnCustomButton() { ID = "btnDelete", Text = "Delete" });
+
+    settings.Columns.Add("ID", MVCxGridViewColumnType.TextBox);
+    settings.Columns.Add("Text", MVCxGridViewColumnType.TextBox);
+    settings.Columns.Add("Checked", MVCxGridViewColumnType.CheckBox);
+    
+    settings.CellEditorInitialize += (s, e) => {
+        e.Editor.ReadOnly = false;
+        if (e.Column.FieldName == "ID" || e.Column.FieldName == "Text")
+            ((ASPxTextBox)e.Editor).ValidationSettings.Display = Display.Dynamic;
+        else
+            ((ASPxCheckBox)e.Editor).ValidationSettings.Display = Display.Dynamic;
+    };
+        
+    settings.ClientSideEvents.BatchEditStartEditing = "OnStartEditing";
+    settings.ClientSideEvents.CustomButtonClick = "OnCustomButtonClick";
+}).Bind(Model).GetHtml()
