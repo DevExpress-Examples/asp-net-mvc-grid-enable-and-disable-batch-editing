@@ -1,0 +1,26 @@
+﻿@Html.DevExpress().GridView(settings =>
+{
+    settings.Name = "gridView";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+
+    settings.KeyFieldName = "ID";
+    settings.SettingsEditing.Mode = GridViewEditingMode.Batch;
+
+    settings.CommandColumn.Visible = true;
+    settings.CommandColumn.ShowNewButtonInHeader = true;
+    settings.CommandColumn.ShowDeleteButton = true;
+
+    settings.Columns.Add("ID", MVCxGridViewColumnType.TextBox);
+    settings.Columns.Add("Text", MVCxGridViewColumnType.TextBox);
+    settings.Columns.Add("Checked", MVCxGridViewColumnType.CheckBox);
+
+    settings.CellEditorInitialize += (s, e) =>
+    {
+        e.Editor.ReadOnly = false;
+        (e.Editor as ASPxEdit).ValidationSettings.Display = Display.Dynamic;
+    };
+    settings.ClientSideEvents.BatchEditRowDeleting = "OnEditing";
+    settings.ClientSideEvents.BatchEditRowInserting = "OnEditing";
+    settings.ClientSideEvents.BatchEditStartEditing = "OnEditing";
+  
+}).Bind(Model).GetHtml()
