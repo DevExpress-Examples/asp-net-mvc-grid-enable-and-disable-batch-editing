@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/Sample/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/Sample/Controllers/HomeController.vb))
+* [GridViewPartial.cshtml](./CS/Sample/Views/Home/GridViewPartial.cshtml)
+* **[Index.cshtml](./CS/Sample/Views/Home/Index.cshtml)**
+<!-- default file list end -->
 # GridView - How to conditionally enable and disable the batch editing on the client side
 
 
