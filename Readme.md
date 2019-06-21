@@ -6,6 +6,9 @@
 * **[Index.cshtml](./CS/Sample/Views/Home/Index.cshtml)**
 <!-- default file list end -->
 # GridView - How to conditionally enable and disable the batch editing on the client side
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t150965)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to conditionally enable or disable the editing on the client side. You can find detailed steps by clicking below the "Show Implementation Details" link .<br><br></p>
