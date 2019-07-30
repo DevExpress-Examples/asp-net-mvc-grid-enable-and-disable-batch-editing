@@ -7,7 +7,7 @@
 <!-- default file list end -->
 # GridView - How to conditionally enable and disable the batch editing on the client side
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t150965)**
+**[[Run Online]](https://codecentral.devexpress.com/t150965/)**
 <!-- run online end -->
 
 
