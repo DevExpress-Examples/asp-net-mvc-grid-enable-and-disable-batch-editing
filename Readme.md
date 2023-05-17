@@ -16,7 +16,7 @@ This example demonstrates how to use the check box state to enable or disable th
 
 Follow the steps below:
 
-1. Create the [Grid View](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewExtension) control and populate it with columns. Set the grid's [SettingsEditing.Mode](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxGridViewEditingSettings.Mode) property to `Batch` to enable the batch edit mode. Add a command column and set its [ShowNewButtonInHeader](https://docs.devexpress.devx/AspNet/DevExpress.Web.GridViewCommandColumn.ShowNewButtonInHeader) and [ShowDeleteButton](https://docs.devexpress.devx/AspNet/DevExpress.Web.GridViewCommandColumn.ShowDeleteButton) properties to `true`.
+1. Create the [Grid View](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewExtension) control and populate it with columns. Set the grid's [SettingsEditing.Mode](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridViewEditingSettings.Mode) property to `Batch` to enable the batch edit mode. Add a command column and set its [ShowNewButtonInHeader](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewCommandColumn.ShowNewButtonInHeader) and [ShowDeleteButton](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewCommandColumn.ShowDeleteButton) properties to `true`.
 
     ```cshtml
     @Html.DevExpress().GridView(settings => {
@@ -29,7 +29,7 @@ Follow the steps below:
     }).Bind(Model).GetHtml()
     ```
 
-2. Add a check box and handle its client-side [CheckedChanged](https://docs.devexpress.devx/AspNet/DevExpress.Web.ASPxCheckBox.CheckedChanged) event. In the handler, get the current state of the check box and assign the state to a flag variable.
+2. Add a check box and handle its client-side [CheckedChanged](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxCheckBox.CheckedChanged) event. In the handler, get the current state of the check box and assign the state to a flag variable.
 
     ```cshtml
     @Html.DevExpress().CheckBox(settings => {
@@ -46,7 +46,7 @@ Follow the steps below:
     }
     ```
 
-3. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditStartEditing), [BatchEditRowInserting](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditRowInserting), and [BatcshEditRowDeleting](https://docs.devexpress.devx/AspNet/js-ASPxClientGridView.BatchEditRowDeleting) events. In the handler, cancel the current edit operation based on the flag variable value.
+3. Handle the grid's client-side [BatchEditStartEditing](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditStartEditing), [BatchEditRowInserting](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditRowInserting), and [BatcshEditRowDeleting](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.BatchEditRowDeleting) events. In the handler, cancel the current edit operation based on the flag variable value.
 
     ```cshtml
     @Html.DevExpress().GridView(settings => {
