@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # GridView for ASP.NET MVC - How to enable or disable the cell edit functionality in batch mode based on a condition
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128549835/)**
-<!-- run online end -->
 
 This example demonstrates how to use the check box state to enable or disable the grid's cell edit functionality in batch edit mode.
 
